@@ -17,7 +17,7 @@ def mastermind():
     name = input("Hello. Please Enter Your Name: ")
 
     print()
-    print("Hi", name, "and Welcome to Mastermind! Your job is to guess a four colour combination (either Red, Blue, Green, White, or Pink) that randomly generates every time you play.")
+    print("Hello", name, "and Welcome to Mastermind! Your job is to guess a four colour combination (either Red, Blue, Green, White, or Pink) that randomly generates every time you play.")
     print()
 
     ready = input("Are you ready? [y/n] ")
@@ -40,15 +40,15 @@ def mastermind():
                 if guess1 != c1:
 
                     colourswrong += 1
-
+                    
                 if guess2 != c2:
 
                     colourswrong += 1
-
+                    
                 if guess3 != c3:
 
                     colourswrong += 1
-
+                    
                 if guess4 != c4:
 
                     colourswrong += 1
@@ -56,8 +56,8 @@ def mastermind():
                 if colourswrong == 0:
 
                     print()
-                    print('You Got It!')
-                    print('It took you ' + str(count) + ' trie(s) to guess the colour combinaton!')
+                    print('You Got It! The comninaton was', c1, c2, c3, c4)
+                    print('It took you ' + str(count) + ' attempt(s) to guess the colour combinaton!')
 
                     break
 
@@ -71,23 +71,24 @@ def mastermind():
 
             else:
 
+
                 print()
-                print("Please enter one of colours")
+                print("Please enter an appropiate colour")
 
                 if guess1 and guess2 and guess3 and guess4 in ['R', 'B', 'G', 'W', 'P']:
 
                     if guess1 != c1:
 
                         colourswrong += 1
-
+                    
                     if guess2 != c2:
 
                         colourswrong += 1
-
+                    
                     if guess3 != c3:
 
                         colourswrong += 1
-
+                    
                     if guess4 != c4:
 
                         colourswrong += 1
@@ -95,8 +96,8 @@ def mastermind():
                     if colourswrong == 0:
 
                         print()
-                        print('You Got It!')
-                        print('It took you ' + str(count) + ' trie(s) to guess the colour combinaton!')
+                        print('You Got It! The comninaton was', c1, c2, c3, c4)
+                        print('It took you ' + str(count) + ' attempt(s) to guess the colour combinaton!')
 
                         break
 
@@ -108,11 +109,10 @@ def mastermind():
 
                     count += 1
 
-            
-
     if ready in ['n']:
 
         print()
         print("Okay. Come back when your ready.")
+        print("When your ready just type in 'mastermind()'")
 
 mastermind()
